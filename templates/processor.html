@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} home {% endblock %}
+{% block content %} 
+ <h1>processor</h1>
+ {% for each in bank %}
+ <ul>
+    <li>{{each.name}} {{each.balance}}</li>
+ </ul>
+ {% endfor %}
+ 
+{% endblock %}

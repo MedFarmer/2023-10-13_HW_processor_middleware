@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} home {% endblock %}
+{% block content %} 
+    <h3> sorting in ascending by balance </h3>
+    {% for each in clients %}
+    <ul>
+        <li> {{each.name}} with balance {{ each.balance }}</li>
+    </ul>
+    {% endfor %}
+
+    <h3> not sorted, as it is </h3>
+    {% for each in not_sorted %}
+    <ul>
+        <li> {{each.name}} with balance {{ each.balance }}</li>
+    </ul>
+    {% endfor %}
+{% endblock %}
